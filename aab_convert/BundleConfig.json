@@ -1,0 +1,57 @@
+{
+	"optimizations": {
+		"splitsConfig": {
+			"splitDimension": [
+				{
+					"value": "ABI",
+					"negate": false
+				},
+				{
+					"value": "LANGUAGE",
+					"negate": true
+				},
+				{
+					"value": "SCREEN_DENSITY",
+					"negate": true
+				}
+			]
+		},
+		"uncompressNativeLibraries": {
+			"enabled": false
+		},
+		"uncompressDexFiles": {
+			"enabled": true
+		},
+		"standaloneConfig": {
+			"splitDimension": [
+				{
+					"value": "ABI",
+					"negate": true
+				},
+				{
+					"value": "LANGUAGE",
+					"negate": true
+				},
+				{
+					"value": "SCREEN_DENSITY",
+					"negate": true
+				},
+				{
+					"value": "TEXTURE_COMPRESSION_FORMAT",
+					"negate": true
+				}
+			],
+			"strip64BitLibraries": true
+		}
+	},
+	"compression": {
+		"uncompressedGlob": [
+			"assets/**/*.unity3d",
+			"assets/**/*.ress",
+			"assets/**/*.resource",
+			"assets/build_info",
+			"assets/fat"
+		],
+		"installTimeAssetModuleDefaultCompression": "UNSPECIFIED"
+	}
+}
