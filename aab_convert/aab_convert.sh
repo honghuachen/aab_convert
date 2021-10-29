@@ -9,6 +9,9 @@ chmod 777 ${aapt2}
 bundletool=/Volumes/Project/deployment/aab_split/bundletool-all.jar
 BundleConfig=/Volumes/Project/deployment/aab_split/BundleConfig.json
 
+#aab_convert com.aab.test /Volumes/Project/deployment/aab_split/unity-release.aab
+aab_convert $1 $2
+
 function create_base_asset_manifest()
 {
     PACKAGE=$1
@@ -124,9 +127,6 @@ function aab_convert()
     #${jarsigner} -J-Duser.language=en -storepass 123456 -keypass 123456 -keystore ./keystore/test.keystore ${AAB_OUT_PUT} swordsman
     signer_aab ./keystore/test.keystore swordsman 123456 123456
 }
-
-
-#aab_convert com.aab.test /Volumes/Project/deployment/aab_split/unity-release.aab
 
 
 
